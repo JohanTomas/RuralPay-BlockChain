@@ -1,0 +1,90 @@
+/* Add Network Modal Styles */
+#addNetworkModal .form-input {
+  transition: all 0.2s ease-in-out;
+  border-width: 1px;
+}
+
+#addNetworkModal .form-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+#addNetworkModal .form-input::placeholder {
+  color: #9ca3af;
+}
+
+#addNetworkModal .error {
+  border-color: #ef4444;
+}
+
+#addNetworkModal .error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Modal animation */
+#addNetworkModal {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#addNetworkModal[style*="block"] {
+  opacity: 1;
+}
+
+/* Input group icons */
+.input-group-icon {
+  transition: color 0.2s ease;
+}
+
+.form-input:focus + .input-group-icon {
+  color: #6366f1;
+}
+
+/* Button hover effects */
+.btn-primary {
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #4338ca, #6d28d9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-secondary {
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #f9fafb;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #addNetworkModal .grid-cols-1.md\:grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  #addNetworkModal .form-input {
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+  }
+}
+
+/* Smooth transitions */
+.form-input, .btn-primary, .btn-secondary {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus states */
+.form-input:focus {
+  outline: none;
+}
+
+/* Form labels */
+.form-label {
+  font-weight: 500;
+  color: #374151;
+}

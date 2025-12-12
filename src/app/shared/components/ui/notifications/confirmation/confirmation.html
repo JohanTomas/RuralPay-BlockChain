@@ -1,0 +1,14 @@
+<div class="confirmation-overlay">
+  <div class="confirmation-dialog">
+    <div class="confirmation-header">
+      <h3 class="confirmation-title">{{ title }}</h3>
+    </div>
+    <div class="confirmation-body">
+      <p class="confirmation-message">{{ message }}</p>
+    </div>
+    <div class="confirmation-actions">
+      <button class="btn btn-secondary" (click)="onCancel()">{{ cancelText }}</button>
+      <button class="btn btn-primary" (click)="onConfirm()">{{ confirmText }}</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+<div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-indigo-100">
+  <div class="text-center mb-6">
+    <h2 class="text-2xl font-bold text-gray-900">Crear Nueva Cuenta</h2>
+    <p class="mt-2 text-sm text-gray-600">
+      Completa tu información para crear tu cuenta en RuralPay
+    </p>
+  </div>
+
+  <form (ngSubmit)="onSubmit()" class="space-y-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div>
+        <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">
+          Nombre *
+        </label>
+        <input
+          id="firstName"
+          name="firstName"
+          type="text"
+          [(ngModel)]="firstName"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+          placeholder="Tu nombre"
+        />
+      </div>
+
+      <div>
+        <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">
+          Apellido *
+        </label>
+        <input
+          id="lastName"
+          name="lastName"
+          type="text"
+          [(ngModel)]="lastName"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+          placeholder="Tu apellido"
+        />
+      </div>
+    </div>
+
+    <div>
+      <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">
+        Teléfono
+      </label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        [(ngModel)]="phone"
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+        placeholder="+54 11 1234 5678"
+      />
+    </div>
+
+    <div>
+      <label for="address" class="block text-sm font-medium text-gray-700 mb-1">
+        Dirección
+      </label>
+      <input
+        id="address"
+        name="address"
+        type="text"
+        [(ngModel)]="address"
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+        placeholder="Tu dirección"
+      />
+    </div>
+
+    <div>
+      <label for="password" class="block text-sm font-medium text-gray-700 mb-1">
+        Contraseña *
+      </label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        [(ngModel)]="password"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+        placeholder="Mínimo 8 caracteres"
+      />
+    </div>
+
+    <div>
+      <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-1">
+        Confirmar Contraseña *
+      </label>
+      <input
+        id="confirmPassword"
+        name="confirmPassword"
+        type="password"
+        [(ngModel)]="confirmPassword"
+        required
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+        placeholder="Repite tu contraseña"
+      />
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+      <button
+        type="button"
+        (click)="onCancel()"
+        class="flex-1 py-3 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition"
+      >
+        Cancelar
+      </button>
+      <button
+        type="submit"
+        class="flex-1 py-3 px-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition shadow-md hover:shadow-lg"
+      >
+        Crear Cuenta
+      </button>
+    </div>
+  </form>
+</div>

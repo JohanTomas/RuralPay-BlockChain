@@ -1,0 +1,19 @@
+<div class="toast-container">
+     @for (message of messages(); track message.id) {
+     <div [class]="getToastClasses(message.type)" role="alert">
+          <div class="toast-content">
+               <div class="toast-icon">
+                    {{ message.icon }}
+               </div>
+               <div class="toast-body">
+                    <div class="toast-title">{{ message.title }}</div>
+                    <div class="toast-message">{{ message.message }}</div>
+               </div>
+               <button class="toast-close" (click)="onClose(message.id!)" aria-label="Cerrar notificación">
+                    ✕
+               </button>
+          </div>
+          <div class="toast-progress"></div>
+     </div>
+     }
+</div>

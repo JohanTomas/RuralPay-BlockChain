@@ -1,0 +1,70 @@
+/* Enhanced styles for the login component */
+:host {
+  display: block;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+}
+
+/* Modal animation */
+#networkSelectionModal {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#networkSelectionModal[style*="block"] {
+  opacity: 1;
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Card hover effect */
+.max-w-md {
+  transition: all 0.3s ease;
+}
+
+.max-w-md:hover {
+  transform: translateY(-5px);
+}
+
+/* Gradient text animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-clip-text {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Custom scrollbar for modal */
+#networkSelectionModal ::-webkit-scrollbar {
+  width: 6px;
+}
+
+#networkSelectionModal ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#networkSelectionModal ::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 3px;
+}
+
+#networkSelectionModal ::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

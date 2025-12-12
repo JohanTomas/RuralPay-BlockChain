@@ -1,0 +1,48 @@
+# Dependencias
+node_modules
+
+# Salidas de construcción
+dist
+.out
+
+# Archivos de entorno
+.env
+.env.local
+.env.production.local
+
+# Archivos de registro
+logs
+*.log
+
+# Datos de ejecución
+tmp
+temp
+
+# Archivos de IDE y editor
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Archivos de Git
+.git
+.gitignore
+
+# Caché de Angular
+.angular
+
+# Registros de depuración de npm
+npm-debug.log*
+
+# Contexto de construcción de Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Pruebas
+coverage
+*.spec.ts
+
+# Archivos opcionales
+README.md
